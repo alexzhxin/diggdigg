@@ -39,11 +39,11 @@ jQuery(document).ready(function(){
 		
 		jQuery(window).scroll(function () { 
 		  
-			var scroll_from_top = jQuery(window).scrollTop() + 30;
+			var scroll_from_top = jQuery(window).scrollTop() + 120;
 			var is_fixed = $dd_outer.css('position') == 'fixed';
 			
 			if($dd_end.length){
-				var dd_ajax_float_bottom = dd_end - ($floating_bar.height() + 30);
+				var dd_ajax_float_bottom = dd_end - ($floating_bar.height() + 120);
 			}
 			
 			if($floating_bar.length > 0)
@@ -54,7 +54,7 @@ jQuery(document).ready(function(){
 				} 
 				else if ( scroll_from_top > dd_top && !is_fixed )
 				{
-					dd_position_floating_bar(30, dd_left);
+					dd_position_floating_bar(120, dd_left);
 					$dd_outer.css('position', 'fixed');
 				}
 				else if ( scroll_from_top < dd_top && is_fixed )
